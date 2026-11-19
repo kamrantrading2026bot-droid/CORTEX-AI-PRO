@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <title>CORTEX AI PRO</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 20px;
+      background: #101827; color: #f4f7fb;
+      font-family: Arial, sans-serif;
+    }
+    .panel {
+      max-width: 480px; margin: 20px auto;
+      padding: 22px; border-radius: 18px;
+      background: #1b293b; border: 1px solid #34465e;
+    }
+    h1 { margin: 0 0 6px; color: #55d6a5; }
+    .muted { color: #a9b8ca; font-size: 13px; }
+    label { display: block; margin-top: 18px; }
+    select, button {
+      width: 100%; padding: 13px; margin-top: 8px;
+      border-radius: 10px; border: 1px solid #52647a;
+      background: #26384e; color: white; font-size: 16px;
+    }
+    button { background: #168b68; border: 0; font-weight: bold; }
+    .signal {
+      margin-top: 22px; padding: 20px;
+      border-radius: 12px; background: #101827;
+      text-align: center;
+    }
+    #result { font-size: 25px; font-weight: bold; margin: 10px; }
+    .warning { color: #ffc76a; font-size: 12px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <main class="panel">
+    <h1>CORTEX AI PRO</h1>
+    <p class="muted">Trading Analysis Control Board</p>
+
+    <label for="pair">Currency Pair</label>
+    <select id="pair">
+      <option>EUR/USD</option>
+      <option>GBP/USD</option>
+      <option>USD/JPY</option>
+      <option>NZD/CAD</option>
+    </select>
+
+    <label for="market">Market Type</label>
+    <select id="market">
+      <option>Regular</option>
+      <option>OTC</option>
+    </select>
+
+    <label for="timeframe">Timeframe</label>
+    <select id="timeframe">
+      <option>15 seconds</option>
+      <option>30 seconds</option>
+      <option>1 minute</option>
+    </select>
+
+    <div class="signal">
+      <div class="muted">SIGNAL STATUS</div>
+      <div id="result">NO DATA</div>
+      <div class="muted" id="detail">Market data not connected</div>
+    </div>
+
+    <p class="warning">
+      This is an interface preview only. It does not read live market data,
+      generate trading predictions, or place trades.
+    </p>
+  </main>
+</body>
+</html>
